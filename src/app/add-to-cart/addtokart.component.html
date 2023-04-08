@@ -1,0 +1,13 @@
+<table>
+    <tr>
+      <th>Product Name</th>
+      <th>Selected Item</th>
+      <th>Price</th>
+    </tr>
+    <tr  *ngFor="let product of cartItem; let i =index">
+      <td>{{product.name}}</td>
+      <td><i class="bi bi-plus-circle" (click)="addCount(i)"></i> {{product.count}} <i class="bi bi-dash-circle" (click)="minusCount(i)"></i></td>
+      <td>{{product.price}}</td>
+    </tr>
+
+  </table>  
